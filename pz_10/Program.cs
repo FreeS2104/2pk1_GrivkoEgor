@@ -8,21 +8,21 @@ namespace pz_10
         {
             Random rand = new Random();
 
-            float[][] arr = new float[4][]; ///// Создаем ступенчатый массив
+            float[][] arr = new float[7][]; ///// Создаем ступенчатый массив
 
             arr[0] = new float[rand.Next(5, 31)];
             arr[1] = new float[rand.Next(5, 31)];
             arr[2] = new float[rand.Next(5, 31)];
             arr[3] = new float[rand.Next(5, 31)];
-
-            int firstАlphаNum = Convert.ToInt32('a');
-            int lastАlphаNum = Convert.ToInt32('z');
-
+            arr[4] = new float[rand.Next(5, 31)];
+            arr[5] = new float[rand.Next(5, 31)];
+            arr[6] = new float[rand.Next(5, 31)];
+           
             for (int y = 0; y < arr.Length; y++) /// Рандомные числа в массив
             {
                 for (int x = 0; x < arr[y].Length; x++ )
                 {
-                    arr[y][x] = Convert.ToChar(rand.Next(firstАlphаNum, lastАlphаNum + 1));
+                    arr[y][x] = Convert.ToChar(rand.Next(0,21));
                 }
             }
             Console.WriteLine("Ступенчатый массив"); ////// Массив

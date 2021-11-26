@@ -4,21 +4,35 @@ namespace pz_16_готовая
 {
     class Program
     {
-        static void GetLimetSumm(int n, out int ss)
+        static string danukchmo(string str)
         {
-            ss = 0;
-            for (int i = 0; i <= n; i++)
+            
+                char[] dop;
+                char simv;
+                int i;
+                dop = str.ToCharArray();
+                for (i = 0; i < (dop.Length / 2); i++)
+                {
+                    simv = dop[i];
+                    dop[i] = dop[dop.Length - i - 1];
+                    dop[dop.Length - i - 1] = simv;
+
+                }
+                str = new string(dop);
+                return str;
+
+            static void Main(string[] args)
             {
-                ss += i;
+
+                string fwd = "asdfghj";
+                string rvs = danukchmo(fwd);
+
+                Console.WriteLine(fwd);
+                Console.WriteLine(rvs);
+
+                Console.ReadKey();
+
             }
-            Console.WriteLine(ss);
-        }
-        static void Main(string[] args)
-        {
-            int sum;
-            Console.WriteLine("Ведите число до которого хотите посчитать сумму :");
-            int n = Convert.ToInt32(Console.ReadLine());
-            GetLimetSumm(n, out sum);
-        }
-    }
+        } 
+        
 }

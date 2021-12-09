@@ -4,15 +4,21 @@ namespace pz_18._4_задание
 {
     class Program
     {
-        static double Summ(int n)
+        static void Reverse(int number)
         {
-            if (n <= 1) return n;
-            return n + Summ(n - 1);
+            int newNum = number % 10;
+            Console.Write(newNum);
+            number /= 10;
+
+            if (number > 0)
+                Reverse(number);
         }
-        static void Main(string[] args)
+        static void Main()
         {
-            int n = 4;       
-            Console.WriteLine(Summ(n));
+            int a = Convert.ToInt32(Console.ReadLine());
+            Reverse(a);
+            Console.ReadKey();
         }
+
     }
 }

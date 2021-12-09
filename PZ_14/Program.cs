@@ -8,8 +8,8 @@ namespace PZ_14
     {
         static void Main(string[] args)
         {
-            string pathToInput = @"D:\Egor\input.txt";
-            string pathToOutput = @"D:\Egor\output.txt";
+            string pathToInput = @"C:\Users\grivko.es1226\Desktop\Egor\input.txt";
+            string pathToOutput = @"C:\Users\grivko.es1226\Desktop\Egor\output.txt";
             int[] nums = new int[100];
             File.Delete(pathToInput);
             using (StreamWriter sw = File.AppendText(pathToInput))

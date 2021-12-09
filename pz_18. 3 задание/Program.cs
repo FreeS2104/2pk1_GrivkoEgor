@@ -12,7 +12,8 @@ namespace pz_18._3_задание
         }
         static void Main(string[] args)
         {
-            Bomba(60, 0); 
+            Bomba(60, 0);
+ 
         }
     }
 }
